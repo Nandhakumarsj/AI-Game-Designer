@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from dotenv import load_dotenv
 import os
 import google.generativeai as genai
 
@@ -10,12 +11,6 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    if 'file' not in request.files:
-        return "No file part"
-    file = request.files['file']
-    if file.filename == '':
-        return "No selected file"
-
     genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
     generation_config = {

@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Game Designer</title>
 </head>
 
@@ -16,9 +15,9 @@
     <form action="/upload" method="post" enctype="multipart/form-data">
         <label for="theme">Game Theme:</label>
         <input type="text" id="theme" name="theme" required><br>
-    
+        <!--     
         <label for="theme_image">Upload a Background Theme Image:</label>
-        <input type="file" id="theme_image" name="theme_image" accept="image/*" required><br>
+        <input type="file" id="theme_image" name="theme_image" accept="image/*" required><br> -->
 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
