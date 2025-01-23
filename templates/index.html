@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Game Designer</title>
+</head>
+
+<body>
+    <h1>Game Designer</h1>
+    <!-- Get the list of game characters with the following properties
+     name, appearance, age, height, weight, build, hair, Clothing, Accessories, Personality, Skills, Character Background
+      -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="theme">Game Theme:</label>
+        <input type="text" id="theme" name="theme" required><br>
+    
+        <label for="theme_image">Upload a Background Theme Image:</label>
+        <input type="file" id="theme_image" name="theme_image" accept="image/*" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height"><br>
+
+        <label for="weight">Weight:</label>
+        <input type="text" id="weight" name="weight"><br>
+
+        <label for="build">Build:</label>
+        <input type="text" id="build" name="build" required><br>
+
+        <label for="hair">Hair:</label>
+        <input type="text" id="hair" name="hair" required><br>
+
+        <label for="eye">Eyes:</label>
+        <input type="text" id="eye" name="eye" required><br>
+
+        <label for="clothing">Clothing:</label>
+        <input type="text" id="clothing" name="clothing" required><br>
+
+        <label for="accessories">Accessories:</label>
+        <input type="text" id="accessories" name="accessories" required><br>
+
+        <label for="personality">Personality:</label>
+        <input type="text" id="personality" name="personality" required><br>
+
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills" required><br>
+
+        <label for="character_background">Character Background:</label>
+        <textarea id="character_background" name="character_background"></textarea><br>
+
+        <button type="submit">Create Your Game World</button>
+    </form>
+    <!-- <button type="button" id="add-character">Add Another Character</button>
+
+    <script>
+        document.getElementById('add-character').addEventListener('click', function() {
+            const form = document.querySelector('form');
+            const newForm = form.cloneNode(true);
+            newForm.querySelector('button[type="submit"]').remove();
+            form.parentNode.insertBefore(newForm, form.nextSibling);
+        });
+    </script> -->
+
+</body>
+
+</html>
